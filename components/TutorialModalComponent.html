@@ -38,7 +38,7 @@
   <li>Components</li>
   <li
   >
-  ForgotPasswordPage</li>
+  TutorialModalComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -64,7 +64,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/forgot-password/forgot-password.page.ts</code>
+    <code>src/app/tutorial-modal/tutorial-modal.component.ts</code>
 </p>
 
 
@@ -95,19 +95,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-forgot-password</code></td>
+                <td class="col-md-9"><code>app-tutorial-modal</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./forgot-password.page.scss</code></td>
+                <td class="col-md-9"><code>./tutorial-modal.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./forgot-password.page.html</code></td>
+                <td class="col-md-9"><code>./tutorial-modal.component.html</code></td>
             </tr>
 
 
@@ -135,6 +135,14 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#confirm" >confirm</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#dismissModal" >dismissModal</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                         </ul>
@@ -155,15 +163,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(modalController: ModalController)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/forgot-password/forgot-password.page.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/tutorial-modal/tutorial-modal.component.ts:9</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>modalController</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -177,6 +215,84 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="confirm"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>confirm</b></span>
+                        <a href="#confirm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>confirm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/tutorial-modal/tutorial-modal.component.ts:20</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="dismissModal"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>dismissModal</b></span>
+                        <a href="#dismissModal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>dismissModal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="16"
+                            class="link-to-prism">src/app/tutorial-modal/tutorial-modal.component.ts:16</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -197,8 +313,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/forgot-password/forgot-password.page.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="13"
+                            class="link-to-prism">src/app/tutorial-modal/tutorial-modal.component.ts:13</a></div>
                 </td>
             </tr>
 
@@ -221,54 +337,86 @@
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+import { ModalController } from &#x27;@ionic/angular&#x27;;
 
 @Component({
-  selector: &#x27;app-forgot-password&#x27;,
-  templateUrl: &#x27;./forgot-password.page.html&#x27;,
-  styleUrls: [&#x27;./forgot-password.page.scss&#x27;],
+  selector: &#x27;app-tutorial-modal&#x27;,
+  templateUrl: &#x27;./tutorial-modal.component.html&#x27;,
+  styleUrls: [&#x27;./tutorial-modal.component.scss&#x27;],
 })
-export class ForgotPasswordPage implements OnInit {
+export class TutorialModalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
 
-  ngOnInit() {
+  ngOnInit() {}
+
+
+  async dismissModal() {
+    this.modalController.dismiss()
   }
 
+  async confirm() {
+    this.dismissModal()
+  }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;ion-header&gt;
-  &lt;ion-toolbar&gt;
-    &lt;ion-title&gt;Forgot Password&lt;/ion-title&gt;
-  &lt;/ion-toolbar&gt;
-&lt;/ion-header&gt;
-
-&lt;ion-content&gt;
-  &lt;div class&#x3D;&quot;center&quot;&gt;
-    &lt;div class&#x3D;&quot;container&quot;&gt;
-      &lt;h2&gt;Forgot you password?&lt;/h2&gt;
-      &lt;h4&gt;Enter you email below to recieve a password reset link.&lt;/h4&gt;
-      &lt;ion-item&gt;
-        &lt;ion-label position&#x3D;&quot;stacked&quot;&gt;Email&lt;/ion-label&gt;
-        &lt;ion-input placeholder&#x3D;&quot;Email&quot;&gt;&lt;/ion-input&gt;
-      &lt;/ion-item&gt;
-      &lt;ion-button&gt;Send Password Reset Email&lt;/ion-button&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/ion-content&gt;
-</code></pre>
+        <pre class="line-numbers"><code class="language-html">&lt;ion-toolbar&gt;
+  &lt;ion-title&gt;
+    Tutorial Sliders
+  &lt;/ion-title&gt;
+  &lt;ion-buttons slot&#x3D;&quot;end&quot;&gt;
+    &lt;ion-button class&#x3D;&quot;toolbar-button&quot; (click)&#x3D;&quot;dismissModal()&quot;&gt;
+      &lt;ion-icon name&#x3D;&quot;close-circle-outline&quot;&gt;&lt;/ion-icon&gt;
+    &lt;/ion-button&gt;
+  &lt;/ion-buttons&gt;
+&lt;/ion-toolbar&gt;
+&lt;div class&#x3D;&quot;center&quot;&gt;
+  &lt;h1&gt;to be implemented&lt;/h1&gt;
+&lt;/div&gt;
+&lt;ion-button (click)&#x3D;&quot;confirm()&quot;&gt;Okay&lt;/ion-button&gt;</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./forgot-password.page.scss</code>
+                    <code>./tutorial-modal.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.container {
-    margin-top: 4em;
-    align-self: center;
- }</code></pre>
+                <pre class="line-numbers"><code class="language-scss">.center {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.img-div {
+    height: 30vw;
+    width: 30vw;
+    max-width: 8em;
+    max-height: 8em;
+    min-width: 6em;
+    min-height: 6em;
+    border-radius: 100%;
+    background-color: red;
+    .image {
+        width: 90%;
+        height: 90%;
+        border-radius: 100%;
+        margin-top: 5%;
+    }
+}
+
+.quan-label {
+    padding-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}</code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -296,10 +444,10 @@ export class ForgotPasswordPage implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-header>  <ion-toolbar>    <ion-title>Forgot Password</ion-title>  </ion-toolbar></ion-header><ion-content>  <div class="center">    <div class="container">      <h2>Forgot you password?</h2>      <h4>Enter you email below to recieve a password reset link.</h4>      <ion-item>        <ion-label position="stacked">Email</ion-label>        <ion-input placeholder="Email"></ion-input>      </ion-item>      <ion-button>Send Password Reset Email</ion-button>    </div>  </div></ion-content></div>'
+        var COMPONENT_TEMPLATE = '<div><ion-toolbar>  <ion-title>    Tutorial Sliders  </ion-title>  <ion-buttons slot="end">    <ion-button class="toolbar-button" (click)="dismissModal()">      <ion-icon name="close-circle-outline"></ion-icon>    </ion-button>  </ion-buttons></ion-toolbar><div class="center">  <h1>to be implemented</h1></div><ion-button (click)="confirm()">Okay</ion-button></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ForgotPasswordPage', 'selector': 'app-forgot-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'OrderConfirmPage', 'selector': 'app-order-confirm'},{'name': 'OrderDetailPage', 'selector': 'app-order-detail'},{'name': 'OrderModalComponent', 'selector': 'app-order-modal'},{'name': 'OrderPage', 'selector': 'app-order'},{'name': 'PrivacyModalComponent', 'selector': 'app-privacy-modal'},{'name': 'ProfilePage', 'selector': 'app-profile'},{'name': 'SignupPage', 'selector': 'app-signup'},{'name': 'TutorialModalComponent', 'selector': 'app-tutorial-modal'}];
     var DIRECTIVES = [];
-    var ACTUAL_COMPONENT = {'name': 'ForgotPasswordPage'};
+    var ACTUAL_COMPONENT = {'name': 'TutorialModalComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -345,7 +493,7 @@ export class ForgotPasswordPage implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'ForgotPasswordPage.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'TutorialModalComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

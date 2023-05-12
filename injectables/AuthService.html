@@ -79,9 +79,23 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#createAccount" >createAccount</a>
                             </li>
                             <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getCurrentUser" >getCurrentUser</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#isEmailVerififed" >isEmailVerififed</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#sendVerificationEmail" >sendVerificationEmail</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
                                 <a href="#signIn" >signIn</a>
                             </li>
                             <li>
@@ -105,15 +119,69 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(loadingService: <a href="../injectables/LoadingService.html" target="_self">LoadingService</a>, firebaseService: <a href="../injectables/FirebaseService.html" target="_self">FirebaseService</a>, alertService: <a href="../injectables/AlertService.html" target="_self">AlertService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="23" class="link-to-prism">src/app/services/auth.service.ts:23</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="27" class="link-to-prism">src/app/services/auth.service.ts:27</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>loadingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LoadingService.html" target="_self" >LoadingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>firebaseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FirebaseService.html" target="_self" >FirebaseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertService.html" target="_self" >AlertService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -129,6 +197,7 @@
                 <td class="col-md-4">
                     <a name="createAccount"></a>
                     <span class="name">
+                        <span class="modifier">Async</span>
                         <span ><b>createAccount</b></span>
                         <a href="#createAccount"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -136,21 +205,24 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>createAccount(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createAccount(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="34"
-                            class="link-to-prism">src/app/services/auth.service.ts:34</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="70"
+                            class="link-to-prism">src/app/services/auth.service.ts:70</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Creates a new account with an email and password. Also signs the user in</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -194,7 +266,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -208,8 +280,144 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="getCurrentUser"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getCurrentUser</b></span>
+                        <a href="#getCurrentUser"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getCurrentUser()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="42"
+                            class="link-to-prism">src/app/services/auth.service.ts:42</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves the current user</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;any&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promise containing a firebase user object</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="isEmailVerififed"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>isEmailVerififed</b></span>
+                        <a href="#isEmailVerififed"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>isEmailVerififed()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="95"
+                            class="link-to-prism">src/app/services/auth.service.ts:95</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Checks if the current user has verified their email</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;boolean&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promise containing true if the email is verified, false otherwise</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendVerificationEmail"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>sendVerificationEmail</b></span>
+                        <a href="#sendVerificationEmail"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>sendVerificationEmail()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="103"
+                            class="link-to-prism">src/app/services/auth.service.ts:103</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Sends a verification email to the current user</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="signIn"></a>
                     <span class="name">
+                        <span class="modifier">Async</span>
                         <span ><b>signIn</b></span>
                         <a href="#signIn"><span class="icon ion-ios-link"></span></a>
                     </span>
@@ -217,21 +425,24 @@
             </tr>
             <tr>
                 <td class="col-md-4">
-<code>signIn(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>signIn(email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, password: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="30"
-                            class="link-to-prism">src/app/services/auth.service.ts:30</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="55"
+                            class="link-to-prism">src/app/services/auth.service.ts:55</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Signs a user in with email and password</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -275,7 +486,7 @@
                     <div>
                     </div>
                     <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                     <div class="io-description">
@@ -305,14 +516,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="38"
-                            class="link-to-prism">src/app/services/auth.service.ts:38</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/services/auth.service.ts:85</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Signs the user out</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -334,8 +547,12 @@ import {
   onAuthStateChanged,
   signOut, 
   signInWithEmailAndPassword, 
-  createUserWithEmailAndPassword 
+  createUserWithEmailAndPassword,
+  sendEmailVerification
 } from &quot;firebase/auth&quot;
+import { LoadingService } from &#x27;./loading.service&#x27;;
+import { FirebaseService } from &#x27;./firebase.service&#x27;;
+import { AlertService } from &#x27;./alert.service&#x27;;
 
 const auth &#x3D; getAuth()
 onAuthStateChanged(auth, (user) &#x3D;&gt; {
@@ -353,20 +570,87 @@ onAuthStateChanged(auth, (user) &#x3D;&gt; {
 export class AuthService {
 
 
-  constructor() {
+  constructor(
+    private loadingService: LoadingService,
+    private firebaseService: FirebaseService,
+    private alertService: AlertService
+    ) {
 
    }
 
-   signIn(email: string, password: string) {
-    signInWithEmailAndPassword(auth, email, password)
+   /**
+    * Retrieves the current user
+    * @returns Promise containing a firebase user object
+    */
+   async getCurrentUser(): Promise&lt;any&gt; {
+    return new Promise(async (resolve, reject) &#x3D;&gt; {
+      const unsub &#x3D; await auth.onAuthStateChanged(user &#x3D;&gt; {
+        resolve(user)
+      }, reject)
+    })
+  }
+
+  /**
+   * Signs a user in with email and password
+   * @param email 
+   * @param password 
+   */
+   async signIn(email: string, password: string) {
+    await this.loadingService.showLoader()
+    await signInWithEmailAndPassword(auth, email, password).catch((err) &#x3D;&gt; {
+      this.loadingService.dismissLoader()
+      this.alertService.presentAlert(&#x27;Login Failed&#x27;, &#x27;Please try again.&#x27;, [&#x27;Ok&#x27;])
+      // throw err
+    })
+    this.loadingService.dismissLoader()
    }
 
-   createAccount(email:string, password: string) {
-    createUserWithEmailAndPassword(auth, email, password)
+   /**
+    * Creates a new account with an email and password. Also signs the user in
+    * @param email 
+    * @param password 
+    */
+   async createAccount(email:string, password: string) {
+    await this.loadingService.showLoader()
+    await createUserWithEmailAndPassword(auth, email, password).then(async (user) &#x3D;&gt; {
+      await this.firebaseService.createUserProfile(user.user.uid, user.user.email!, new Date())
+    }).catch((err) &#x3D;&gt; {
+      this.loadingService.dismissLoader()
+      //this.alertService.presentAlert(&#x27;Account Creation Failed&#x27;, &#x27;Please try again.&#x27;, [&#x27;Ok&#x27;])
+      // throw err
+    })
+    this.loadingService.dismissLoader()
    }
 
+   /**
+    * Signs the user out
+    */
    signOut() {
+    localStorage.removeItem(&#x27;uid&#x27;)
+    localStorage.removeItem(&#x27;pantryId&#x27;)
     signOut(auth)
+   }
+
+   /**
+    * Checks if the current user has verified their email
+    * @returns Promise containing true if the email is verified, false otherwise
+    */
+   async isEmailVerififed(): Promise&lt;boolean&gt; {
+    let user &#x3D; await this.getCurrentUser()
+    return user.isEmailVerififed
+   }
+
+   /**
+    * Sends a verification email to the current user
+    */
+   async sendVerificationEmail() {
+    await this.loadingService.showLoader()
+    let user &#x3D; await this.getCurrentUser()
+    sendEmailVerification(user).catch((err) &#x3D;&gt; {
+      this.loadingService.dismissLoader()
+      throw err
+    })
+    this.loadingService.dismissLoader()
    }
 
 

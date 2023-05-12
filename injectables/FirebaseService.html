@@ -100,6 +100,10 @@
                                 <a href="#cancelOrder" >cancelOrder</a>
                             </li>
                             <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#createUserProfile" >createUserProfile</a>
+                            </li>
+                            <li>
                                 <a href="#foodItemConv" >foodItemConv</a>
                             </li>
                             <li>
@@ -109,6 +113,10 @@
                             <li>
                                     <span class="modifier">Async</span>
                                 <a href="#getOrderItems" >getOrderItems</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#getPantries" >getPantries</a>
                             </li>
                             <li>
                                     <span class="modifier">Async</span>
@@ -147,15 +155,45 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor()</code>
+<code>constructor(loadingService: <a href="../injectables/LoadingService.html" target="_self">LoadingService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/services/firebase.service.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/services/firebase.service.ts:20</a></div>
                             </td>
                         </tr>
 
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>loadingService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/LoadingService.html" target="_self" >LoadingService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
             </tbody>
         </table>
 </section>
@@ -187,14 +225,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="167"
-                            class="link-to-prism">src/app/services/firebase.service.ts:167</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="262"
+                            class="link-to-prism">src/app/services/firebase.service.ts:262</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Cancels and order. Also adds the items from the order back into the inventory</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -240,6 +280,116 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="createUserProfile"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>createUserProfile</b></span>
+                        <a href="#createUserProfile"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>createUserProfile(uid: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, email: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, timestamp: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank">Date</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="297"
+                            class="link-to-prism">src/app/services/firebase.service.ts:297</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Creates a proble for a user in the database.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>uid</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>UID of profile to create</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>email</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>email for profile</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>timestamp</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date" target="_blank" >Date</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>timestamp of when the account was created</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="foodItemConv"></a>
                     <span class="name">
                         <span ><b>foodItemConv</b></span>
@@ -256,14 +406,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="66"
-                            class="link-to-prism">src/app/services/firebase.service.ts:66</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="124"
+                            class="link-to-prism">src/app/services/firebase.service.ts:124</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Converts the firebase item document to a FoodItem object</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -274,6 +426,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -288,6 +441,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Firebase docuement snapshot to convert</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -299,7 +456,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>a FoodItem object</p>
+
                     </div>
                 </td>
             </tr>
@@ -327,17 +485,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="45"
-                            class="link-to-prism">src/app/services/firebase.service.ts:45</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="94"
+                            class="link-to-prism">src/app/services/firebase.service.ts:94</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves the item in the inventory for the current pantry</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Promise&lt;FoodItem[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise containing an array of items in the invetory</p>
 
                     </div>
                 </td>
@@ -366,14 +532,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="148"
-                            class="link-to-prism">src/app/services/firebase.service.ts:148</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="239"
+                            class="link-to-prism">src/app/services/firebase.service.ts:239</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Retreives the items contained within an order</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -384,6 +552,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -398,6 +567,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>firebase document snapshot to get items from</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -409,7 +582,55 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>A promise containing and array of FoodItems in an order</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getPantries"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>getPantries</b></span>
+                        <a href="#getPantries"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>getPantries()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="37"
+                            class="link-to-prism">src/app/services/firebase.service.ts:37</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves all pantries</p>
+</div>
+
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Promise&lt;Pantry[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>Promise containing an array of pantries in the database</p>
+
                     </div>
                 </td>
             </tr>
@@ -437,17 +658,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="25"
-                            class="link-to-prism">src/app/services/firebase.service.ts:25</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/services/firebase.service.ts:62</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Retrives the current pantry</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Promise&lt;Pantry&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise containing the pantry object from the DB</p>
 
                     </div>
                 </td>
@@ -476,17 +705,25 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="107"
-                            class="link-to-prism">src/app/services/firebase.service.ts:107</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="182"
+                            class="link-to-prism">src/app/services/firebase.service.ts:182</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves all orders for the currently logged in user</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>    <code>Promise&lt;Order[]&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A promise containing an array of Orders</p>
 
                     </div>
                 </td>
@@ -515,14 +752,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="137"
-                            class="link-to-prism">src/app/services/firebase.service.ts:137</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="223"
+                            class="link-to-prism">src/app/services/firebase.service.ts:223</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Converts firebase document to and Order object</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -533,6 +772,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -547,6 +787,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>firebase document snapshot to convert</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -558,7 +802,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>an Order object</p>
+
                     </div>
                 </td>
             </tr>
@@ -584,14 +829,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="40"
-                            class="link-to-prism">src/app/services/firebase.service.ts:40</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="85"
+                            class="link-to-prism">src/app/services/firebase.service.ts:85</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Converts the firebase pantry dictionary to a custom Pantry object</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -602,6 +849,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -616,6 +864,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Firebase document snapshot to convert</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -627,7 +879,8 @@
 
                     </div>
                     <div class="io-description">
-                        
+                        <p>A Pantry object</p>
+
                     </div>
                 </td>
             </tr>
@@ -655,14 +908,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="72"
-                            class="link-to-prism">src/app/services/firebase.service.ts:72</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="133"
+                            class="link-to-prism">src/app/services/firebase.service.ts:133</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>places an order for a user. Also updates the invetory based on what the user orders</p>
+</div>
 
                     <div class="io-description">
                         <b>Parameters :</b>
@@ -673,6 +928,7 @@
                                     <td>Name</td>
                                     <td>Type</td>
                                     <td>Optional</td>
+                                    <td>Description</td>
                                 </tr>
                             </thead>
                             <tbody>
@@ -687,6 +943,10 @@
                                     </td>
 
 
+                                    <td>
+                                        <p>Order to be placed</p>
+
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -734,7 +994,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/services/firebase.service.ts:18</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/services/firebase.service.ts:19</a></div>
                         </td>
                     </tr>
 
@@ -765,7 +1025,7 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/services/firebase.service.ts:19</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/services/firebase.service.ts:20</a></div>
                         </td>
                     </tr>
 
@@ -785,6 +1045,7 @@ import { getFirestore, addDoc, getDocs, doc, DocumentSnapshot, query, where, get
 import { FoodItem } from &#x27;../../../../globalModels/foodItem&#x27;
 import { Order } from &#x27;../../../../globalModels/order&#x27;
 import { Pantry } from &#x27;../../../../globalModels/pantry&#x27;
+import { LoadingService } from &#x27;./loading.service&#x27;;
 
 const db &#x3D; getFirestore()
 
@@ -795,42 +1056,93 @@ export class FirebaseService {
 
   //This will be used to determine which pantry instance is accessed
   //TODO: update/change this when the user logs in
-  pantryName &#x3D; &#x27;testPantry&#x27;
-  userId &#x3D; &#x27;testUser&#x27;
+  pantryName: string &#x3D; &#x27;testPantry&#x27;
+  userId: string &#x3D; &#x27;testUser&#x27;
 
-  constructor() {
-
+  constructor(
+    private loadingService: LoadingService,
+  ) {
+    let temp &#x3D; sessionStorage.getItem(&#x27;uid&#x27;)
+    let temp2 &#x3D; sessionStorage.getItem(&#x27;pantryId&#x27;)
+    if (temp !&#x3D; null &amp;&amp; temp2 !&#x3D; null) {
+      this.userId &#x3D; temp
+      this.pantryName &#x3D; temp2
+    }
   }
 
+  /**
+   * Retrieves all pantries
+   * @returns Promise containing an array of pantries in the database
+   */
+  async getPantries(): Promise&lt;Pantry[]&gt; {
+    await this.loadingService.showLoader()
+    let snapshot &#x3D; undefined
+    try {
+      snapshot &#x3D; await getDocs(collection(db, &#x27;pantries&#x27;))
+    } catch (error) {
+      this.loadingService.dismissLoader()
+      throw error
+    }
+    if (snapshot &#x3D;&#x3D; undefined) {
+      this.loadingService.dismissLoader()
+      throw Error(&#x27;No Pantries Found&#x27;)
+    }
+    var toReturn: Pantry[] &#x3D; []
+    snapshot.forEach((pantry) &#x3D;&gt; {
+      toReturn.push(this.pantryConv(pantry))
+    })
+    this.loadingService.dismissLoader()
+    return toReturn
+  }
+
+  /**
+   * Retrives the current pantry
+   * @returns A promise containing the pantry object from the DB
+   */
   async getPantry(): Promise&lt;Pantry&gt; {
+    await this.loadingService.showLoader()
     let snapshot &#x3D; undefined;
     try {
-      snapshot &#x3D; await getDoc(doc(collection(db, &#x27;pantries/&#x27; + this.pantryName)))
+      snapshot &#x3D; await getDoc(doc(db, &#x27;pantries/&#x27; + this.pantryName))
     } catch (error) {
+      this.loadingService.dismissLoader()
       throw (error)
     }
     if (snapshot &#x3D;&#x3D; undefined) {
+      this.loadingService.dismissLoader()
       throw Error(&#x27;Food Pantry does not exist&#x27;)
     }
-
+    this.loadingService.dismissLoader()
     return this.pantryConv(snapshot)
 
   }
 
+  /**
+   * Converts the firebase pantry dictionary to a custom Pantry object
+   * @param snapshot Firebase document snapshot to convert
+   * @returns A Pantry object
+   */
   pantryConv(snapshot: DocumentSnapshot) {
     let data &#x3D; snapshot.data()!
-    return new Pantry(data[&#x27;name&#x27;], data[&#x27;description&#x27;], data[&#x27;address&#x27;], data[&#x27;logoUrl&#x27;], data[&#x27;primaryColor&#x27;], data[&#x27;secondaryColor&#x27;], data[&#x27;orderLimit&#x27;])
+    return new Pantry(snapshot.id, data[&#x27;name&#x27;], data[&#x27;description&#x27;], data[&#x27;address&#x27;], data[&#x27;logoUrl&#x27;], data[&#x27;primaryColor&#x27;], data[&#x27;secondaryColor&#x27;], data[&#x27;orderLimit&#x27;])
   }
 
+  /**
+   * Retrieves the item in the inventory for the current pantry
+   * @returns A promise containing an array of items in the invetory
+   */
   async getInventory(): Promise&lt;FoodItem[]&gt; {
+    await this.loadingService.showLoader()
     let snapshot &#x3D; undefined;
     try {
       snapshot &#x3D; await getDocs(collection(db, &quot;pantries/&quot; + this.pantryName + &quot;/inventory/&quot;))
     } catch (error) {
+      this.loadingService.dismissLoader()
       //throw error to outer page
       throw error
     }
     if (snapshot &#x3D;&#x3D; undefined) {
+      this.loadingService.dismissLoader()
       throw Error(&#x27;No Data Found&#x27;)
     }
     
@@ -840,16 +1152,26 @@ export class FirebaseService {
         toReturn.push(this.foodItemConv(doc))
       }
     })
+    this.loadingService.dismissLoader()
     return toReturn
   }
 
+  /**
+   * Converts the firebase item document to a FoodItem object
+   * @param snap Firebase docuement snapshot to convert
+   * @returns a FoodItem object
+   */
   foodItemConv(snap: DocumentSnapshot) {
     let docData &#x3D; snap.data()!
     return new FoodItem(snap.id, docData[&#x27;name&#x27;], docData[&#x27;quantity&#x27;], docData[&#x27;orderQuan&#x27;], docData[&#x27;limit&#x27;], docData[&#x27;imageUrl&#x27;])
   }
 
-  //TODO/To figure out if we need: Have this method also update the pantry inventory when the user places an order??????
+  /**
+   * places an order for a user. Also updates the invetory based on what the user orders
+   * @param order Order to be placed
+   */
   async placeOrder(order: Order) {
+    await this.loadingService.showLoader()
     try {
       //Create Document
       let docRef &#x3D; await addDoc(collection(db, &#x27;pantries/&#x27; + this.pantryName + &#x27;/orders/&#x27;), {
@@ -864,6 +1186,12 @@ export class FirebaseService {
           name: item.name,
           quantity: item.orderQuantity
         })
+        let newQuan &#x3D; item.quantity - item.orderQuantity!
+        console.log(item.id)
+        console.log(newQuan)
+        updateDoc(doc(db, &#x27;pantries/&#x27; + this.pantryName + &#x27;/inventory/&#x27; +item.id), {
+          quantity: newQuan
+        })
       }
 
       //Update User Order Array
@@ -876,15 +1204,23 @@ export class FirebaseService {
           userOrders: orders
         })
       } else {
+        this.loadingService.dismissLoader()
         throw Error(&#x27;User does not exist&#x27;)
       }
       
     } catch (err) {
+      this.loadingService.dismissLoader()
       throw err
     }
+    this.loadingService.dismissLoader()
   }
 
+  /**
+   * Retrieves all orders for the currently logged in user
+   * @returns A promise containing an array of Orders
+   */
   async getUserOrders(): Promise&lt;Order[]&gt; {
+    await this.loadingService.showLoader()
     let snapshot &#x3D; undefined
     let userDoc &#x3D; undefined
     try {
@@ -893,27 +1229,37 @@ export class FirebaseService {
       snapshot &#x3D; await getDocs(q)
       if (snapshot.docs.length &gt; 1) {
         //This should never happen
+        this.loadingService.dismissLoader()
         throw Error(&#x27;More than one user found!&#x27;)
       } else if (snapshot.docs.length &lt; 1){
+        this.loadingService.dismissLoader()
         throw Error(&#x27;No user found!&#x27;)
       } else {
         userDoc &#x3D; snapshot.docs[0]
       }
     } catch (err) {
+      this.loadingService.dismissLoader()
       throw err
     }
     
     let toReturn &#x3D; []
     let orders &#x3D; userDoc.data()[&#x27;userOrders&#x27;]
     for (let orderRef of orders) {
+      // console.log(&#x27;get order&#x27;)
       let document: DocumentSnapshot&lt;DocumentData&gt; &#x3D; await getDoc(orderRef)
+      // console.log(&#x27;got order&#x27;)
       let orderToAdd: Order &#x3D; await this.orderConv(document)
       toReturn.push(orderToAdd)
     }
-
+    this.loadingService.dismissLoader()
     return toReturn
   }
 
+  /**
+   * Converts firebase document to and Order object
+   * @param snap firebase document snapshot to convert
+   * @returns an Order object
+   */
   async orderConv(snap: DocumentSnapshot) {
     let docData &#x3D; snap.data()!
     if (docData &#x3D;&#x3D; undefined) {
@@ -925,6 +1271,11 @@ export class FirebaseService {
     return new Order(snap.id, docData[&#x27;date&#x27;], docData[&#x27;status&#x27;], docData[&#x27;uid&#x27;], items)
   }
 
+  /**
+   * Retreives the items contained within an order
+   * @param order firebase document snapshot to get items from
+   * @returns A promise containing and array of FoodItems in an order
+   */
   async getOrderItems(order: DocumentSnapshot): Promise&lt;FoodItem[]&gt; {
     let snapshot &#x3D; undefined
     let orderPath &#x3D; order.ref.path
@@ -944,7 +1295,12 @@ export class FirebaseService {
     return toReturn
   }
 
+  /**
+   * Cancels and order. Also adds the items from the order back into the inventory
+   * @param orderToCancel
+   */
   async cancelOrder(orderToCancel: Order) {
+    await this.loadingService.showLoader()
     let docId &#x3D; orderToCancel.id
     let docRef &#x3D; doc(db, &#x27;pantries/&#x27; + this.pantryName + &#x27;/orders/&#x27; + docId)
     let snapshot &#x3D; await getDoc(docRef)
@@ -953,8 +1309,41 @@ export class FirebaseService {
         //Status 5 corresponds with Order Canceled
         status: 5
       })
+      for (let item of orderToCancel.items) {
+        let itemRef &#x3D; doc(db, &#x27;pantries/&#x27; + this.pantryName + &#x27;/inventory/&#x27; + item.id)
+        let invenItem &#x3D; await getDoc(itemRef)
+        let invenItemData &#x3D; invenItem.data()
+        if (invenItem.exists()) {
+          let currentQuan &#x3D; invenItemData![&#x27;quantity&#x27;]
+          let newQuan &#x3D; currentQuan + item.quantity
+          await updateDoc(itemRef, {
+            quantity: newQuan
+          })
+        }
+      }
     } else {
+      this.loadingService.dismissLoader()
       throw Error(&#x27;Order does not exist!&#x27;)
+    }
+    this.loadingService.dismissLoader()
+  }
+
+  /**
+   * Creates a proble for a user in the database.
+   * @param uid UID of profile to create
+   * @param email email for profile
+   * @param timestamp timestamp of when the account was created
+   */
+  async createUserProfile(uid: string, email: string, timestamp: Date) {
+    try {
+      let docRef &#x3D; await setDoc(doc(db, &#x27;pantries/&#x27; + this.pantryName + &#x27;/users/&#x27; + uid), {
+        date: Timestamp.fromDate(timestamp),
+        uid: uid,
+        email: email,
+        userOrders: []
+      })
+    } catch (err) {
+      throw err;
     }
   }
 

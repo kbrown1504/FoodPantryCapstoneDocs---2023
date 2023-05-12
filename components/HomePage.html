@@ -128,7 +128,13 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#logoUrl" >logoUrl</a>
+                            </li>
+                            <li>
                                 <a href="#orders" >orders</a>
+                            </li>
+                            <li>
+                                <a href="#refreshOrders" >refreshOrders</a>
                             </li>
                         </ul>
                     </td>
@@ -146,7 +152,13 @@
                                 <a href="#goToOrder" >goToOrder</a>
                             </li>
                             <li>
+                                <a href="#goToProfile" >goToProfile</a>
+                            </li>
+                            <li>
                                     <span class="modifier">Async</span>
+                                <a href="#ionViewWillEnter" >ionViewWillEnter</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit" >ngOnInit</a>
                             </li>
                             <li>
@@ -170,12 +182,12 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-<code>constructor(firebase: <a href="../injectables/FirebaseService.html" target="_self">FirebaseService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>)</code>
+<code>constructor(firebase: <a href="../injectables/FirebaseService.html" target="_self">FirebaseService</a>, router: <a href="https://angular.io/api/router/Router" target="_blank">Router</a>, alertService: <a href="../injectables/AlertService.html" target="_self">AlertService</a>)</code>
                     </td>
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/home/home.page.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/home/home.page.ts:17</a></div>
                             </td>
                         </tr>
 
@@ -209,6 +221,18 @@
                                                   
                                                         <td>
                                                                         <code><a href="https://angular.io/api/router/Router" target="_blank" >Router</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>alertService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/AlertService.html" target="_self" >AlertService</a></code>
                                                         </td>
                                                   
                                                     <td>
@@ -254,8 +278,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/home/home.page.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="53"
+                            class="link-to-prism">src/app/home/home.page.ts:53</a></div>
                 </td>
             </tr>
 
@@ -275,26 +299,24 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
-                    <a name="ngOnInit"></a>
+                    <a name="goToProfile"></a>
                     <span class="name">
-                        <span class="modifier">Async</span>
-                        <span ><b>ngOnInit</b></span>
-                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                        <span ><b>goToProfile</b></span>
+                        <a href="#goToProfile"><span class="icon ion-ios-link"></span></a>
                     </span>
                 </td>
             </tr>
             <tr>
                 <td class="col-md-4">
-                    <span class="modifier-icon icon ion-ios-reset"></span>
-                    <code>ngOnInit()</code>
+<code>goToProfile()</code>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="23"
-                            class="link-to-prism">src/app/home/home.page.ts:23</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="49"
+                            class="link-to-prism">src/app/home/home.page.ts:49</a></div>
                 </td>
             </tr>
 
@@ -303,7 +325,85 @@
                 <td class="col-md-4">
 
                     <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ionViewWillEnter"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>ionViewWillEnter</b></span>
+                        <a href="#ionViewWillEnter"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ionViewWillEnter()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="34"
+                            class="link-to-prism">src/app/home/home.page.ts:34</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Retrieves user orders and the pantry</p>
+</div>
+
+                    <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <span ><b>ngOnInit</b></span>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/home/home.page.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
 
                     </div>
                 </td>
@@ -330,8 +430,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="32"
-                            class="link-to-prism">src/app/home/home.page.ts:32</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/home/home.page.ts:58</a></div>
                 </td>
             </tr>
 
@@ -389,6 +489,37 @@
         <tbody>
             <tr>
                 <td class="col-md-4">
+                    <a name="logoUrl"></a>
+                    <span class="name">
+                        <span ><b>logoUrl</b></span>
+                        <a href="#logoUrl"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>&quot;&quot;</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/home/home.page.ts:17</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
                     <a name="orders"></a>
                     <span class="name">
                         <span ><b>orders</b></span>
@@ -409,7 +540,32 @@
                 </tr>
                     <tr>
                         <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/home/home.page.ts:14</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/home/home.page.ts:16</a></div>
+                        </td>
+                    </tr>
+
+
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="refreshOrders"></a>
+                    <span class="name">
+                        <span ><b>refreshOrders</b></span>
+                        <a href="#refreshOrders"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <i>Default value : </i><code>true</code>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/home/home.page.ts:15</a></div>
                         </td>
                     </tr>
 
@@ -427,6 +583,7 @@ import { FirebaseService } from &#x27;../services/firebase.service&#x27;;
 import { Order } from &quot;../../../../globalModels/order&quot;
 import { OrderStatus } from &#x27;../../../../globalModels/orderStatus&#x27;;
 import { Router } from &#x27;@angular/router&#x27;;
+import { AlertService } from &#x27;../services/alert.service&#x27;;
 
 @Component({
   selector: &#x27;app-home&#x27;,
@@ -435,21 +592,46 @@ import { Router } from &#x27;@angular/router&#x27;;
 })
 export class HomePage {
 
+  refreshOrders &#x3D; true
   orders: Order[] &#x3D; []
+  logoUrl: string &#x3D; &quot;&quot;
 
   constructor(
     private firebase: FirebaseService,
     private router: Router,
+    private alertService: AlertService
   ) {
-    firebase.getInventory()
+
   }
 
-  async ngOnInit() {
-    this.orders &#x3D; await this.firebase.getUserOrders()
-    console.log(this.orders)
+  ngOnInit() {
+
+  }
+
+  /**
+   * Retrieves user orders and the pantry
+   */
+  async ionViewWillEnter() {
+    try {
+      if (this.refreshOrders) {
+        this.orders &#x3D; await this.firebase.getUserOrders()
+        this.refreshOrders &#x3D; false
+      }
+      let pantry &#x3D; await this.firebase.getPantry()
+      this.logoUrl &#x3D; pantry.logoUrl
+    }
+    catch {
+      this.alertService.presentAlert(&#x27;Error&#x27;, &#x27;Your orders could not be retrieved! Please try again later.&#x27;, [&#x27;Ok&#x27;])
+    }
+  }
+
+
+  goToProfile() {
+    this.router.navigateByUrl(&#x27;profile&#x27;)
   }
 
   goToOrder() {
+    this.refreshOrders &#x3D; true
     this.router.navigateByUrl(&#x27;order&#x27;)
   }
 
@@ -472,7 +654,7 @@ export class HomePage {
     &lt;ion-title&gt;
       Pantry Home
     &lt;/ion-title&gt;
-    &lt;ion-button slot&#x3D;&quot;end&quot; fill&#x3D;&quot;clear&quot;&gt;
+    &lt;ion-button slot&#x3D;&quot;end&quot; fill&#x3D;&quot;clear&quot; (click)&#x3D;&quot;goToProfile()&quot;&gt;
       &lt;ion-icon class&#x3D;&quot;profile&quot; name&#x3D;&quot;person-circle-outline&quot;&gt;&lt;/ion-icon&gt;
     &lt;/ion-button&gt;
   &lt;/ion-toolbar&gt;
@@ -486,7 +668,7 @@ export class HomePage {
   &lt;/ion-header&gt;
 
   &lt;div id&#x3D;&quot;container&quot;&gt;
-    &lt;img style&#x3D;&quot;width: 30vh; height: 30vh;&quot; src&#x3D;&quot;https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png&quot;&gt;
+    &lt;img style&#x3D;&quot;width: 30vh; height: 30vh;&quot; src&#x3D;&quot;{{logoUrl}}&quot;&gt;
     &lt;h1&gt;Welcome!&lt;/h1&gt;
     &lt;ion-header&gt;My Orders:&lt;/ion-header&gt;
     &lt;ion-card *ngFor&#x3D;&quot;let order of orders&quot;&gt;
@@ -574,8 +756,8 @@ export class HomePage {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-header [translucent]="true">  <ion-toolbar>    <ion-title>      Pantry Home    </ion-title>    <ion-button slot="end" fill="clear">      <ion-icon class="profile" name="person-circle-outline"></ion-icon>    </ion-button>  </ion-toolbar></ion-header><ion-content [fullscreen]="true">  <ion-header collapse="condense">    <ion-toolbar>      <ion-title size="large">Blank</ion-title>    </ion-toolbar>  </ion-header>  <div id="container">    <img style="width: 30vh; height: 30vh;" src="https://www.adaptivewfs.com/wp-content/uploads/2020/07/logo-placeholder-image.png">    <h1>Welcome!</h1>    <ion-header>My Orders:</ion-header>    <ion-card *ngFor="let order of orders">      <ion-accordion-group>        <ion-accordion>          <ion-item slot="header">            <ion-label>Order {{orders.indexOf(order) + 1}}</ion-label>          </ion-item>          <div class="ion-padding" slot="content">            Placed on {{order.timestamp}}            <br>            Current Status: {{order.statStr()}}            <br>            <ion-button (click)="toOrderDetail(order)">View Details</ion-button>          </div>        </ion-accordion>      </ion-accordion-group>    </ion-card>    <ion-button (click)="goToOrder()" expand="block">New Order</ion-button>  </div></ion-content></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ForgotPasswordPage', 'selector': 'app-forgot-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'OrderDetailPage', 'selector': 'app-order-detail'},{'name': 'OrderModalComponent', 'selector': 'app-order-modal'},{'name': 'OrderPage', 'selector': 'app-order'},{'name': 'SignupPage', 'selector': 'app-signup'}];
+        var COMPONENT_TEMPLATE = '<div><ion-header [translucent]="true">  <ion-toolbar>    <ion-title>      Pantry Home    </ion-title>    <ion-button slot="end" fill="clear" (click)="goToProfile()">      <ion-icon class="profile" name="person-circle-outline"></ion-icon>    </ion-button>  </ion-toolbar></ion-header><ion-content [fullscreen]="true">  <ion-header collapse="condense">    <ion-toolbar>      <ion-title size="large">Blank</ion-title>    </ion-toolbar>  </ion-header>  <div id="container">    <img style="width: 30vh; height: 30vh;" src="{{logoUrl}}">    <h1>Welcome!</h1>    <ion-header>My Orders:</ion-header>    <ion-card *ngFor="let order of orders">      <ion-accordion-group>        <ion-accordion>          <ion-item slot="header">            <ion-label>Order {{orders.indexOf(order) + 1}}</ion-label>          </ion-item>          <div class="ion-padding" slot="content">            Placed on {{order.timestamp}}            <br>            Current Status: {{order.statStr()}}            <br>            <ion-button (click)="toOrderDetail(order)">View Details</ion-button>          </div>        </ion-accordion>      </ion-accordion-group>    </ion-card>    <ion-button (click)="goToOrder()" expand="block">New Order</ion-button>  </div></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ForgotPasswordPage', 'selector': 'app-forgot-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'OrderConfirmPage', 'selector': 'app-order-confirm'},{'name': 'OrderDetailPage', 'selector': 'app-order-detail'},{'name': 'OrderModalComponent', 'selector': 'app-order-modal'},{'name': 'OrderPage', 'selector': 'app-order'},{'name': 'PrivacyModalComponent', 'selector': 'app-privacy-modal'},{'name': 'ProfilePage', 'selector': 'app-profile'},{'name': 'SignupPage', 'selector': 'app-signup'},{'name': 'TutorialModalComponent', 'selector': 'app-tutorial-modal'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HomePage'};
 </script>

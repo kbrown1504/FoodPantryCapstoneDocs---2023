@@ -168,6 +168,10 @@
                             <li>
                                 <a href="#quanUp" >quanUp</a>
                             </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#removeFromOrder" >removeFromOrder</a>
+                            </li>
                         </ul>
                     </td>
                 </tr>
@@ -272,14 +276,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="46"
-                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:46</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="69"
+                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:69</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Comfirms the quantity and adds the item to an order</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
@@ -311,8 +317,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="42"
-                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:42</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:62</a></div>
                 </td>
             </tr>
 
@@ -385,14 +391,16 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="36"
-                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:36</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="56"
+                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:56</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>if the quantity is &gt; 1, subtract 1 from the quantity</p>
+</div>
 
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
@@ -422,17 +430,67 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="33"
-                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:33</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="38"
+                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:38</a></div>
                 </td>
             </tr>
 
 
             <tr>
                 <td class="col-md-4">
+                    <div class="io-description"><p>Adds to the displayed quantity if the new quantity would not exceed
+the limit or what is in the inventory.</p>
+</div>
 
+                    <div>
+                    </div>
                     <div class="io-description">
                         <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>returns if the methods should abort</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeFromOrder"></a>
+                    <span class="name">
+                        <span class="modifier">Async</span>
+                        <span ><b>removeFromOrder</b></span>
+                        <a href="#removeFromOrder"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>removeFromOrder()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="77"
+                            class="link-to-prism">src/app/order-modal/order-modal.component.ts:77</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Removes an item from the order</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
 
                     </div>
                 </td>
@@ -537,12 +595,32 @@ export class OrderModalComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    
   }
 
+  /**
+   * Adds to the displayed quantity if the new quantity would not exceed 
+   * the limit or what is in the inventory.
+   * @returns returns if the methods should abort
+   */
   quanUp() {
+    if (this.item.quantity &lt;&#x3D; this.tempQuan) {
+      return
+    }
+    if (this.item.limit !&#x3D; undefined) {
+      if (this.item.limit &gt; this.tempQuan || this.item.limit &#x3D;&#x3D; 0) {
+        this.tempQuan++
+        return
+      } else {
+        return
+      }
+    }
     this.tempQuan++
   }
+
+  /**
+   * if the quantity is &gt; 1, subtract 1 from the quantity
+   */
   quanDown() {
     if (this.tempQuan &gt; 1) {
       this.tempQuan--
@@ -553,8 +631,19 @@ export class OrderModalComponent implements OnInit {
     this.modalController.dismiss()
   }
 
+  /**
+   * Comfirms the quantity and adds the item to an order
+   */
   async confirm() {
     this.item.orderQuantity &#x3D; this.tempQuan
+    await this.modalController.dismiss(this.item)
+  }
+
+  /**
+   * Removes an item from the order
+   */
+  async removeFromOrder() {
+    this.item.orderQuantity &#x3D; 0
     await this.modalController.dismiss(this.item)
   }
 
@@ -574,20 +663,26 @@ export class OrderModalComponent implements OnInit {
   &lt;/ion-buttons&gt;
 &lt;/ion-toolbar&gt;
 
-&lt;div class&#x3D;&quot;center&quot;&gt;
-  &lt;div class&#x3D;&quot;img-div&quot;&gt;
-    &lt;img class&#x3D;&quot;image&quot; (alt)&#x3D;&quot;item.name&quot; src&#x3D;{{item.imageUrl}}&gt;
-    &lt;div class&#x3D;&quot;row&quot;&gt;
-      &lt;ion-button fill&#x3D;&quot;clear&quot; (click)&#x3D;&quot;quanDown()&quot;&gt;
-        &lt;ion-icon name&#x3D;&quot;remove-circle-outline&quot;&gt;&lt;/ion-icon&gt;
-      &lt;/ion-button&gt;
-      &lt;ion-label class&#x3D;&quot;quan-label&quot;&gt;Quantity: {{tempQuan}}&lt;/ion-label&gt;
-      &lt;ion-button fill&#x3D;&quot;clear&quot; (click)&#x3D;&quot;quanUp()&quot;&gt;
-        &lt;ion-icon name&#x3D;&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;
-      &lt;/ion-button&gt;
+&lt;div class&#x3D;&quot;container&quot;&gt;
+  &lt;div *ngIf&#x3D;&quot;item.limit !&#x3D; undefined &amp;&amp; item.limit !&#x3D; 0&quot; class&#x3D;&quot;small-center&quot;&gt;
+    &lt;ion-label&gt;Limit: {{item.limit}}&lt;/ion-label&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;center&quot;&gt;
+    &lt;div class&#x3D;&quot;img-div&quot;&gt;
+      &lt;img class&#x3D;&quot;image&quot; (alt)&#x3D;&quot;item.name&quot; src&#x3D;{{item.imageUrl}}&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;ion-button class&#x3D;&quot;inc-button&quot; fill&#x3D;&quot;clear&quot; (click)&#x3D;&quot;quanDown()&quot;&gt;
+          &lt;ion-icon name&#x3D;&quot;remove-circle-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/ion-button&gt;
+        &lt;ion-label class&#x3D;&quot;quan-label&quot;&gt;Quantity: {{tempQuan}}&lt;/ion-label&gt;
+        &lt;ion-button class&#x3D;&quot;inc-button&quot; fill&#x3D;&quot;clear&quot; (click)&#x3D;&quot;quanUp()&quot;&gt;
+          &lt;ion-icon name&#x3D;&quot;add-circle-outline&quot;&gt;&lt;/ion-icon&gt;
+        &lt;/ion-button&gt;
+      &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
+&lt;ion-button *ngIf&#x3D;&quot;item.orderQuantity !&#x3D; undefined &amp;&amp; item.orderQuantity !&#x3D; 0&quot; color&#x3D;&quot;danger&quot; (click)&#x3D;&quot;removeFromOrder()&quot;&gt;Remove Item&lt;/ion-button&gt;
 &lt;ion-button (click)&#x3D;&quot;confirm()&quot;&gt;Add to Order&lt;/ion-button&gt;</code></pre>
     </div>
 
@@ -595,13 +690,26 @@ export class OrderModalComponent implements OnInit {
                 <p class="comment">
                     <code>./order-modal.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.center {
+                <pre class="line-numbers"><code class="language-scss">.container {
     height: 80%;
+    padding: 10%
+}
+
+.center {
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
     text-align: center;
+}
+.small-center {
+    margin-top: 0px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    text-align: center; 
 }
 
 .img-div {
@@ -612,12 +720,16 @@ export class OrderModalComponent implements OnInit {
     min-width: 6em;
     min-height: 6em;
     border-radius: 100%;
-    background-color: red;
+    background-color: var(--ion-color-primary);
     .image {
         width: 90%;
         height: 90%;
         border-radius: 100%;
         margin-top: 5%;
+        background-color: white !important;
+    }
+    .inc-button {
+        margin-top: 20px;    
     }
 }
 
@@ -656,8 +768,8 @@ export class OrderModalComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><ion-toolbar>  <ion-title>    {{item.name}}  </ion-title>  <ion-buttons slot="end">    <ion-button class="toolbar-button" (click)="dismissModal()">      <ion-icon name="close-circle-outline"></ion-icon>    </ion-button>  </ion-buttons></ion-toolbar><div class="center">  <div class="img-div">    <img class="image" (alt)="item.name" src={{item.imageUrl}}>    <div class="row">      <ion-button fill="clear" (click)="quanDown()">        <ion-icon name="remove-circle-outline"></ion-icon>      </ion-button>      <ion-label class="quan-label">Quantity: {{tempQuan}}</ion-label>      <ion-button fill="clear" (click)="quanUp()">        <ion-icon name="add-circle-outline"></ion-icon>      </ion-button>    </div>  </div></div><ion-button (click)="confirm()">Add to Order</ion-button></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ForgotPasswordPage', 'selector': 'app-forgot-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'OrderDetailPage', 'selector': 'app-order-detail'},{'name': 'OrderModalComponent', 'selector': 'app-order-modal'},{'name': 'OrderPage', 'selector': 'app-order'},{'name': 'SignupPage', 'selector': 'app-signup'}];
+        var COMPONENT_TEMPLATE = '<div><ion-toolbar>  <ion-title>    {{item.name}}  </ion-title>  <ion-buttons slot="end">    <ion-button class="toolbar-button" (click)="dismissModal()">      <ion-icon name="close-circle-outline"></ion-icon>    </ion-button>  </ion-buttons></ion-toolbar><div class="container">  <div *ngIf="item.limit != undefined && item.limit != 0" class="small-center">    <ion-label>Limit: {{item.limit}}</ion-label>  </div>  <div class="center">    <div class="img-div">      <img class="image" (alt)="item.name" src={{item.imageUrl}}>      <div class="row">        <ion-button class="inc-button" fill="clear" (click)="quanDown()">          <ion-icon name="remove-circle-outline"></ion-icon>        </ion-button>        <ion-label class="quan-label">Quantity: {{tempQuan}}</ion-label>        <ion-button class="inc-button" fill="clear" (click)="quanUp()">          <ion-icon name="add-circle-outline"></ion-icon>        </ion-button>      </div>    </div>  </div></div><ion-button *ngIf="item.orderQuantity != undefined && item.orderQuantity != 0" color="danger" (click)="removeFromOrder()">Remove Item</ion-button><ion-button (click)="confirm()">Add to Order</ion-button></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ForgotPasswordPage', 'selector': 'app-forgot-password'},{'name': 'HomePage', 'selector': 'app-home'},{'name': 'LoginPage', 'selector': 'app-login'},{'name': 'OrderConfirmPage', 'selector': 'app-order-confirm'},{'name': 'OrderDetailPage', 'selector': 'app-order-detail'},{'name': 'OrderModalComponent', 'selector': 'app-order-modal'},{'name': 'OrderPage', 'selector': 'app-order'},{'name': 'PrivacyModalComponent', 'selector': 'app-privacy-modal'},{'name': 'ProfilePage', 'selector': 'app-profile'},{'name': 'SignupPage', 'selector': 'app-signup'},{'name': 'TutorialModalComponent', 'selector': 'app-tutorial-modal'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'OrderModalComponent'};
 </script>
